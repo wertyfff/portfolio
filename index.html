@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Сергей Шаповалов — портфолио</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Unbounded:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // До отрисовки: тема, режим загрузки и старт с первого экрана
+    try { document.documentElement.dataset.theme = localStorage.getItem('theme') || 'violet'; } catch (e) {}
+    document.documentElement.classList.add('is-loading');
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+  </script>
+</head>
+<body>
+
+  <!-- ЭКРАН ЗАГРУЗКИ -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__bar"></div>
+    <b class="loader__num">0</b>
+    <div class="loader__fill">
+      <div class="loader__inner"><b class="loader__num">0</b></div>
+    </div>
+  </div>
+
+  <!-- ШАПКА -->
+  <header class="header">
+    <a href="#top" class="logo">ш<span>.</span></a>
+    <nav class="nav">
+      <a href="#about" class="pill">Обо мне</a>
+      <a href="#works" class="pill">Работы</a>
+      <a href="#reviews" class="pill">Отзывы</a>
+      <a href="#contacts" class="pill pill--accent">Связаться</a>
+    </nav>
+    <button class="burger" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <!-- МОБИЛЬНОЕ МЕНЮ -->
+  <div class="mmenu" aria-hidden="true">
+    <nav class="mmenu__nav">
+      <a href="#about">Обо мне</a>
+      <a href="#works">Работы</a>
+      <a href="#logos">Логотипы</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a href="https://t.me/kiwnt1" class="mmenu__cta">Написать в Telegram <i>↗</i></a>
+  </div>
+
+  <!-- ПЕРВЫЙ ЭКРАН -->
+  <section class="hero" id="top">
+    <div class="hero__rays" aria-hidden="true"></div>
+    <span class="tag">Привет, давай знакомиться!</span>
+    <h1 class="hero__title">Сергей Шаповалов</h1>
+    <p class="hero__sub">портфолио <span class="amp">&amp;</span> веб-дизайн</p>
+    <p class="hero__desc">Делаю сайты, лендинги, мобильные интерфейсы, логотипы и полиграфию. Здесь будет короткое описание о себе — 1–2 строки.</p>
+  </section>
+
+  <!-- ОБО МНЕ -->
+  <section class="sheet" id="about">
+    <div class="section-head">
+      <h2 class="h2">Немного <span class="hl">обо мне</span></h2>
+    </div>
+
+    <div class="bento">
+      <article class="card card--resume">
+        <h3 class="card__title">Резюме</h3>
+        <dl class="resume">
+          <div><dt>Имя</dt><dd>Сергей Шаповалов</dd></div>
+          <div><dt>Дата рождения</dt><dd>27.09.2006</dd></div>
+          <div><dt>Телефон</dt><dd>+7 913 848 52 29</dd></div>
+          <div class="resume__wide"><dt>Почта</dt><dd>sssapovalov780@gmail.com</dd></div>
+          <div><dt>Телеграм</dt><dd>@kiwnt1</dd></div>
+          <div><dt>Направление</dt><dd>Веб-дизайн, UX/UI</dd></div>
+        </dl>
+        <p class="card__text">Soft skills — ответственный, все проекты закрываю раньше сроков. Внимателен к мелочам.</p>
+      </article>
+
+      <img class="photo photo--me" src="img/about/me.jpg" alt="Сергей Шаповалов">
+
+      <article class="card card--stat card--lime">
+        <b class="stat">5+</b>
+        <p>Инструментов (Adobe, Figma, AI) для работы</p>
+      </article>
+
+      <article class="card card--stat card--blue">
+        <b class="stat">70%</b>
+        <p>Клиентов возвращаются с новыми задачами</p>
+      </article>
+
+      <article class="card card--stat card--orange">
+        <b class="stat">100%</b>
+        <p>Проектов сданы вовремя</p>
+      </article>
+
+      <article class="card card--word">
+        <b class="word">портфолио</b>
+        <div class="word__meta"><span>2026</span><span>веб-дизайнер</span></div>
+      </article>
+
+      <article class="card card--tools">
+        <h3 class="card__title">С чем работаю</h3>
+        <ul class="tools">
+          <li><span>Figma</span><i style="--v:90%"></i><em>90%</em></li>
+          <li><span>Claude Code</span><i style="--v:80%"></i><em>80%</em></li>
+          <li><span>ChatGPT</span><i style="--v:70%"></i><em>70%</em></li>
+          <li><span>After Effects</span><i style="--v:55%"></i><em>55%</em></li>
+          <li><span>AI-инструменты</span><i style="--v:65%"></i><em>65%</em></li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- РАБОТЫ -->
+  <section class="works" id="works">
+    <div class="section-head section-head--light">
+      <span class="tag">Все проекты выполнены с нуля</span>
+      <h2 class="h2 h2--big">Мои работы</h2>
+      <p class="hero__sub hero__sub--sm">веб-дизайн <span class="amp">&amp;</span> графика</p>
+    </div>
+
+    <div class="filters" role="tablist">
+      <button class="pill is-active" data-filter="all">Все</button>
+      <button class="pill" data-filter="web">Веб</button>
+      <button class="pill" data-filter="app">Приложения</button>
+      <button class="pill" data-filter="print">Полиграфия</button>
+    </div>
+
+    <div class="cases">
+      <a href="https://wertyfff.github.io/vyro/" target="_blank" rel="noopener" class="case case--violet" data-cat="web">
+        <img class="case__img" src="img/cases/vyro.jpg" alt="Сайт VYRO Cards">
+        <div class="case__label"><div><b>VYRO Cards</b><span>Сайт для банковских карт</span></div><i>↗</i></div>
+      </a>
+      <a href="https://wertyfff.github.io/avnt/" target="_blank" rel="noopener" class="case case--lime" data-cat="web">
+        <img class="case__img" src="img/cases/avnt.jpg" alt="Сайт AVNT">
+        <div class="case__label"><div><b>AVNT</b><span>Сайт бренда очков</span></div><i>↗</i></div>
+      </a>
+      <a href="https://wertyfff.github.io/unit-doma/" target="_blank" rel="noopener" class="case case--pink" data-cat="web">
+        <img class="case__img" src="img/cases/unit.jpg" alt="Сайт UNIT — модульные дома">
+        <div class="case__label"><div><b>UNIT</b><span>Сайт модульных домов</span></div><i>↗</i></div>
+      </a>
+      <div class="case case--dark" data-cat="app">
+        <img class="case__img" src="img/cases/crypto.jpg" alt="Приложение крипто-кошелька">
+        <div class="case__label"><div><b>Crypto Wallet</b><span>Мобильное приложение</span></div></div>
+      </div>
+      <div class="case case--sky" data-cat="print">
+        <img class="case__img" src="img/cases/blue-moon.jpg" alt="Меню для Blue Moon Bar">
+        <div class="case__label"><div><b>Blue Moon Bar</b><span>Меню для бара</span></div></div>
+      </div>
+      <div class="case case--orange" data-cat="print">
+        <img class="case__img" src="img/cases/friends.jpg" alt="Визитки Friends">
+        <div class="case__label"><div><b>Friends</b><span>Визитки / айдентика</span></div></div>
+      </div>
+    </div>
+    <div class="cases-dots" aria-hidden="true"></div>
+  </section>
+
+  <!-- ЛОГОТИПЫ -->
+  <section class="sheet" id="logos">
+    <div class="section-head">
+      <h2 class="h2">Логотипы</h2>
+      <p class="lead">Знаки и айдентика для небольших брендов.</p>
+    </div>
+    <div class="logos">
+      <figure class="logo-card"><img src="img/logos/puley.png" alt="Puley"><figcaption>Puley</figcaption></figure>
+      <figure class="logo-card"><img src="img/logos/friends.png" alt="Friends"><figcaption>Friends</figcaption></figure>
+      <figure class="logo-card"><img src="img/logos/quest.png" alt="Quest"><figcaption>Quest</figcaption></figure>
+      <figure class="logo-card"><img src="img/logos/incognito-vpn.png" alt="Incognito VPN"><figcaption>Incognito VPN</figcaption></figure>
+      <figure class="logo-card"><img src="img/logos/go.png" alt="GO"><figcaption>GO — доставка</figcaption></figure>
+      <figure class="logo-card"><img src="img/logos/happy-child.png" alt="Happy Child"><figcaption>Happy Child — развлекательный центр</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- КАК РАБОТАЮ -->
+  <section class="process">
+    <div class="section-head section-head--light">
+      <h2 class="h2 h2--big">Как я работаю</h2>
+    </div>
+    <div class="steps">
+      <article class="step"><span class="step__n">01</span><h3>Задача</h3><p>Разбираюсь в запросе, задаю вопросы, изучаю аудиторию и конкурентов.</p></article>
+      <article class="step step--lime"><span class="step__n">02</span><h3>Цель</h3><p>Фиксирую, какого результата должен добиться проект.</p></article>
+      <article class="step"><span class="step__n">03</span><h3>Структура</h3><p>Собираю прототип и логику экранов.</p></article>
+      <article class="step step--orange"><span class="step__n">04</span><h3>Решение</h3><p>Дизайн, дизайн-система и передача в разработку.</p></article>
+    </div>
+  </section>
+
+  <!-- ОТЗЫВЫ -->
+  <section class="sheet" id="reviews">
+    <div class="section-head">
+      <h2 class="h2">Что говорят <span class="hl">клиенты</span></h2>
+    </div>
+    <div class="reviews">
+      <figure class="review">
+        <blockquote>Очень ответственный подход! Всё доделал в срок. Стильный, минималистичный дизайн. Приятно, что Сергей прислушивался к моим правкам.</blockquote>
+        <figcaption><span class="ava ava--blue">Д</span><div><b>Дарья</b><small>Разработка логотипа</small></div></figcaption>
+      </figure>
+      <figure class="review">
+        <blockquote>Сергей объяснил мне каждый блок. Клиенты стали чаще оставлять заявки, а раньше сайт был непонятный. Спасибо за работу!</blockquote>
+        <figcaption><span class="ava ava--lime">С</span><div><b>Софья</b><small>Разработка лендинга</small></div></figcaption>
+      </figure>
+      <figure class="review">
+        <blockquote>Наконец-то нашла дизайнера, который слышит, что я говорю. Результат даже лучше, чем я представляла. Спасибо!</blockquote>
+        <figcaption><span class="ava ava--orange">Е</span><div><b>Екатерина</b><small>Разработка лендинга</small></div></figcaption>
+      </figure>
+      <figure class="review">
+        <blockquote>Первый опыт работы с дизайнером — и сразу удачный. Всё быстро, чётко и без нервов. Огромное спасибо!</blockquote>
+        <figcaption><span class="ava ava--pink">В</span><div><b>Влад</b><small>Разработка лендинга</small></div></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- КОНТАКТЫ -->
+  <section class="contacts" id="contacts">
+    <div class="section-head section-head--light">
+      <span class="tag">Открыт к новым проектам</span>
+      <h2 class="h2 h2--big">Давай работать</h2>
+      <p class="hero__sub hero__sub--sm">пиши <span class="amp">&amp;</span> обсудим</p>
+    </div>
+    <div class="contact-grid">
+      <a href="https://t.me/kiwnt1" class="contact contact--main">
+        <small>Telegram — самый быстрый способ</small>
+        <b>@kiwnt1</b>
+        <i>↗</i>
+      </a>
+      <a href="mailto:sssapovalov780@gmail.com" class="contact">
+        <small>Почта</small>
+        <b>sssapovalov780@gmail.com</b>
+      </a>
+      <a href="tel:+79138485229" class="contact">
+        <small>Телефон</small>
+        <b>+7 913 848 52 29</b>
+      </a>
+    </div>
+    <footer class="footer">
+      <span>© 2026 Сергей Шаповалов</span>
+      <span>Спасибо за просмотр :)</span>
+    </footer>
+  </section>
+
+  <!-- Временная панель для теста цветов — потом удалим -->
+  <div class="themes" aria-label="Цветовая тема">
+    <span>Цвета</span>
+    <button data-theme="violet" title="Фиолетовый" style="--c:#5b2eff"></button>
+    <button data-theme="graphite" title="Графит" style="--c:#151515"></button>
+    <button data-theme="emerald" title="Тёмно-зелёный" style="--c:#1d3f2e"></button>
+    <button data-theme="coral" title="Коралл" style="--c:#ff5b3a"></button>
+    <button data-theme="blue" title="Синий (как было)" style="--c:#1462ff"></button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
