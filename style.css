@@ -434,10 +434,10 @@ a.case:hover .case__label i { background: var(--primary); color: var(--white); }
 .ava--pink { background: var(--acc3); }
 
 /* ---------- контакты ---------- */
-.contact-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 16px; }
+.contact-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 16px; }
 .contact {
   position: relative;
-  min-height: 200px;
+  min-height: 130px;
   padding: 28px;
   border-radius: var(--radius);
   background: var(--white);
@@ -449,9 +449,9 @@ a.case:hover .case__label i { background: var(--primary); color: var(--white); }
 .contact:hover { transform: translateY(-4px); }
 .contact small { color: var(--muted); font-size: 14px; }
 .contact b { font-size: 20px; font-weight: 600; overflow-wrap: anywhere; }
-.contact--main { background: var(--lime); }
+.contact--main { grid-row: span 3; min-height: 420px; background: var(--lime); }
 .contact--main small { color: rgba(13, 21, 48, .6); }
-.contact--main b { font-family: var(--display); font-size: clamp(26px, 3vw, 40px); font-weight: 800; }
+.contact--main b { font-family: var(--display); font-size: clamp(30px, 4.6vw, 64px); font-weight: 800; letter-spacing: -.03em; }
 .contact--main i {
   position: absolute; top: 24px; right: 24px;
   width: 52px; height: 52px;
@@ -702,7 +702,7 @@ html.is-loading .header { opacity: 0; transform: translateY(-20px); }
   /* контакты */
   .contact-grid { grid-template-columns: 1fr; gap: 8px; }
   .contact { min-height: 0; gap: 28px; padding: 22px; border-radius: 22px; }
-  .contact--main { min-height: 170px; }
+  .contact--main { grid-row: auto; min-height: 170px; }
   .contact b { font-size: 18px; }
   .footer { margin-top: 48px; flex-direction: column; gap: 8px; }
 

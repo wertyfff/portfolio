@@ -91,7 +91,7 @@ const burger = document.querySelector('.burger');
 const toggleMenu = (open) => {
   document.documentElement.classList.toggle('menu-open', open);
   burger.setAttribute('aria-expanded', open);
-  burger.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+  burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
 };
 burger.addEventListener('click', () => toggleMenu(!document.documentElement.classList.contains('menu-open')));
 document.querySelectorAll('.mmenu a').forEach((a) => a.addEventListener('click', () => toggleMenu(false)));
